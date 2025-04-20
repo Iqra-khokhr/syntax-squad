@@ -29,3 +29,19 @@ count = 0
 while count < 5:
     print("Counting...", count)
     count += 1
+    output
+    Numbers: 6
+x is not 5
+0
+1
+2
+3
+4
+Even squares: [0, 4, 16]
+Key not found
+Set: {(1, 2, 3)}
+Counting... 0
+Counting... 1
+Counting... 2
+Counting... 3
+Counting... 4
