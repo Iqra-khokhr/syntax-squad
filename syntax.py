@@ -1,47 +1,36 @@
+# List with a typo in function name and logic error
 numbers = [1, 2, 3, 4, 5]
-numbers.append(6)
-print("Numbers:", numbers[5])
+numbers.apend(6)  # Typo: 'apend' instead of 'append'
+print("Numbers:", numbers[6])  # IndexError
 
+# Tuple modification (tuples are immutable)
 my_tuple = (10, 20, 30)
-my_list = list(my_tuple)
-my_list[1] = 25
-my_tuple = tuple(my_list)
+my_tuple[1] = 25  # TypeError
 
+# Selection structure with assignment instead of comparison
 x = 10
-if x == 5:
+if x = 5:  # SyntaxError: should be '=='
     print("x is 5")
-else:
-    print("x is not 5")
 
-for i in range(5):
-    print(i)
+# Loop repetition with incorrect range and indentation
+for i in range(5)
+print(i)  # IndentationError and missing colon
 
-squares = [i*i for i in range(5) if i % 2 == 0]
-print("Even squares:", squares)
+# List comprehension with syntax issue
+squares = [i*i for i in range(5) if i % 2 = 0]  # SyntaxError in condition
 
-my_dict = {'a': 3, 'b': 2}
-print(my_dict.get('c', 'Key not found'))
+# Dictionary with duplicate keys and access error
+my_dict = {'a': 1, 'b': 2, 'a': 3}
+print(my_dict['c'])  # KeyError: 'c' doesn't exist
+
+# Set with unhashable item
 my_set = set()
-my_set.add((1, 2, 3))
-print("Set:", my_set)
+my_set.add([1, 2, 3])  # TypeError: list is unhashable
 
+# Infinite loop due to missing update
 count = 0
 while count < 5:
-    print("Counting...", count)
-    count += 1
-    output
-    Numbers: 6
-x is not 5
-0
-1
-2
-3
-4
-Even squares: [0, 4, 16]
-Key not found
-Set: {(1, 2, 3)}
-Counting... 0
-Counting... 1
-Counting... 2
-Counting... 3
-Counting... 4
+    print("Counting...")  # No increment, infinite loop
+
+
+
